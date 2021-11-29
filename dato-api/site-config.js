@@ -1,7 +1,7 @@
 import { fetchAPI } from "@/lib/api";
 
 export const siteConfigurationQuery = `
-  siteConf(filter: {confId: {eq: "${process.env.SITE_RELATED}"}}, locale: $locale) {
+  siteConf(filter: {confId: {eq: "${process.env.WEBSITE_CONF_ID}"}}, locale: $locale) {
     id
     websiteName
 }

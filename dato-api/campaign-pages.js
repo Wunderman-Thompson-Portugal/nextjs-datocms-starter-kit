@@ -1,5 +1,4 @@
 import { fetchAPI, fetchPages } from "@/lib/api";
-
 import { HeroImageFragment } from "@/lib/section-fragment";
 
 export async function GetCampaignPage(locale, preview) {
