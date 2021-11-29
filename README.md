@@ -1,4 +1,6 @@
-# A Blog example using Next.js and DatoCMS
+# Wunderman Thompson Portugal
+
+## A Blog example using Next.js and DatoCMS
 
 This example showcases a Next.js Blog using [DatoCMS](https://www.datocms.com/) as the data source. It fully supports [Preview Mode](https://www.datocms.com/docs/next-js/setting-up-next-js-preview-mode) with [DatoCMS real-time updates](https://www.datocms.com/docs/next-js/real-time-updates).
 
