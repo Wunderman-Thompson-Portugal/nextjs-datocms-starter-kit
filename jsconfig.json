@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/dato-api/*": ["dato-api/*"],
+        "@/components/*": ["components/*"],
+        "@/lib/*": ["lib/*"],
+        "@/styles/*": ["styles/*"]
+      }
+    }
+  }
+  

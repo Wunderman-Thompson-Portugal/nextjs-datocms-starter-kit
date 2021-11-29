@@ -1,0 +1,10 @@
+.env
+.now
+.next
+node_modules/
+out/
+.env.local
+yarn.lock
+package-lock.json
+
+.vercel
