@@ -1,5 +1,4 @@
 import { getHomePage } from "@/dato-api/home";
-
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
