@@ -26,7 +26,7 @@ export default function sectionFeatureProduct(data) {
                   <Image className={`max-w-[25rem]`} data={entry.image} />
                   {entry.color.map((color) => (
                     <div
-                      style={{ backgroundColor: ${color.color.hex} }}
+                      style={{ backgroundColor: color.color.hex }}
                       className="mt-4 w-8 h-8 rounded-full"
                     ></div>
                   ))}

@@ -1,7 +1,9 @@
+import ReactMarkdown from "react-markdown";
+
 export function Subtitle({ copy, className }) {
   return (
     <>
-      <p className={className}>{copy}</p>
+      <ReactMarkdown className={className}>{copy}</ReactMarkdown>
     </>
   );
 }
