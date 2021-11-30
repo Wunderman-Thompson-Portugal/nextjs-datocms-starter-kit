@@ -11,5 +11,22 @@ export const fragment = `
       __typename
       id
       title
+      subtitle
+      addHeader
+      products {
+        id
+        title
+        media {
+          ... on PictureRecord {
+            id
+            image {
+              responsiveImage {
+              ... responsiveImageFragment
+              }
+      
+            }
+          }
+        }
+      }
   }
 `;
