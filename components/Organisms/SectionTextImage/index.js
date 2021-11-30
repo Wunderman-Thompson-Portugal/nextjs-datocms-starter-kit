@@ -1,4 +1,5 @@
 import Image from "@/components/Atoms/Image";
+import ReactMarkdown from "react-markdown";
 
 export default function SectionTextImage(data) {
   return (
@@ -11,9 +12,9 @@ export default function SectionTextImage(data) {
           {data.addHeader && (
             <h3 className="text-3xl font-semibold">{data.title}</h3>
           )}
-          <p className=" text-lg leading-relaxed text-blueGray-500">
+          <ReactMarkdown className=" text-base leading-relaxed text-blueGray-500">
             {data.content}
-          </p>
+          </ReactMarkdown>
         </div>
       </div>
     </section>
