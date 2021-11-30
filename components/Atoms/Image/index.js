@@ -1,5 +1,4 @@
 import { Image } from 'react-datocms'
-// import cn from 'classnames'
 
 export default function CustomImage({ data, className, ariaHidden, draggable }) {
 
