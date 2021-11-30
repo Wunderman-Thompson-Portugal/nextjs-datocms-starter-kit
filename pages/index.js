@@ -18,10 +18,7 @@ export default function Index({ data }) {
   const { t } = useTranslation();
 
   return (
-    <>
-      <Hero data={data.heroBanner} />
-      <div>{t("testTranslation")}</div>
-    </>
+    <></>
   );
 }
 

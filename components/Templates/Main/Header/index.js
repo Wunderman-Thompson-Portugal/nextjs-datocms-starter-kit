@@ -1,14 +1,19 @@
 import Head from "next/head";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { BurgerMenu } from "@/components/Atoms/Buttons";
 
 export default function GenericHeader(props) {
   const [activeMenu, setActiveMenu] = useState(false);
 
+  const { locale, route } = useRouter();
   const toggleMenu = () => {
     setActiveMenu(!activeMenu);
   };
+
+  if (route === '/')
+    return <></>;
 
   return (
     <nav>
@@ -55,7 +60,7 @@ export default function GenericHeader(props) {
             </div>
           </div>
 
-          {/* mobile button goes here */}          
+          {/* mobile button goes here */}
           <BurgerMenu
             toggleMenu={activeMenu}
             onClick={() => toggleMenu()}
@@ -64,7 +69,7 @@ export default function GenericHeader(props) {
       </div>
 
       {/* Add JS to open and close mobile menu https://github.com/Wunderman-Thompson-Portugal/html-starter-kit/blob/main/public/js/app.js */}
-      <div className={`mobile-menu md:hidden ${ !activeMenu && "hidden" }`}>
+      <div className={`mobile-menu md:hidden ${!activeMenu && "hidden"}`}>
         <a href="#" className={`block py-2 px-4 text-sm hover:bg-gray-200`}>
           Features
         </a>
