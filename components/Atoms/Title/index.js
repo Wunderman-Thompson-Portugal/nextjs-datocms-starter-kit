@@ -1,7 +1,7 @@
-export function HeadlineH3(props) {
+export function HeadlineH3({ copy, className }) {
   return (
     <>
-      <h3 className="text-3xl font-semibold">{props.copy}</h3>
+      <h3 className={className}>{copy}</h3>
     </>
   );
 }

@@ -1,10 +1,10 @@
 import ReactMarkdown from "react-markdown";
 
-export function Paragraph(props) {
+export function Paragraph({copy, className}) {
   return (
     <>
-      <ReactMarkdown className=" text-base leading-relaxed">
-        {props.copy}
+      <ReactMarkdown className={className}>
+        {copy}
       </ReactMarkdown>
     </>
   );
