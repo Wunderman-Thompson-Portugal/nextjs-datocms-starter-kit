@@ -1,0 +1,7 @@
+.mobile-menu-button {
+  svg {
+    @media (max-width: 650px) {
+      width: 30px;
+    }
+  }
+}
