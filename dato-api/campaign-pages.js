@@ -1,4 +1,5 @@
 import { fetchAPI, responsiveImageFragment } from "@/lib/api";
+import { siteConfigurationQuery } from "./site-config";
 import {
   HeroImageFragment,
   TextImageFragment,
@@ -27,9 +28,10 @@ export async function GetCampaignPage(slug, locale, preview) {
             ... FeatureProductFragment
  
         }
+        ${siteConfigurationQuery}
       }
     }
-    ${responsiveImageFragment }
+    ${responsiveImageFragment}
     ${HeroImageFragment}
     ${TextImageFragment}
     ${LogotypeFragment}

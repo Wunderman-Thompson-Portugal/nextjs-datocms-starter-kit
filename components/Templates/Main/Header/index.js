@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import { useState } from "react";
+import Image from "@/components/Atoms/Image";
 import { useRouter } from "next/router";
 
 import { BurgerMenu } from "@/components/Atoms/Buttons";
@@ -12,8 +14,7 @@ export default function GenericHeader(props) {
     setActiveMenu(!activeMenu);
   };
 
-  if (route === '/')
-    return <></>;
+  if (route === "/") return <></>;
 
   return (
     <nav>
@@ -39,6 +40,10 @@ export default function GenericHeader(props) {
                     d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                   />
                 </svg>
+                <Image
+                  className="w-[120px] sm:w-[150px] md:w-[250px] lg:w-[180px] xl:w-[220px]"
+                  data={props.logotype}
+                />
                 <span className={`font-bold`}>Wunderman Thompson Portugal</span>
               </a>
             </div>
@@ -61,10 +66,7 @@ export default function GenericHeader(props) {
           </div>
 
           {/* mobile button goes here */}
-          <BurgerMenu
-            toggleMenu={activeMenu}
-            onClick={() => toggleMenu()}
-          />
+          <BurgerMenu toggleMenu={activeMenu} onClick={() => toggleMenu()} />
         </div>
       </div>
 
