@@ -1,4 +1,4 @@
-import { fetchAPI, fetchPages } from "@/lib/api";
+import { fetchAPI, responsiveImageFragment } from "@/lib/api";
 import {
   HeroImageFragment,
   TextImageFragment,
@@ -29,6 +29,7 @@ export async function GetCampaignPage(slug, locale, preview) {
         }
       }
     }
+    ${responsiveImageFragment }
     ${HeroImageFragment}
     ${TextImageFragment}
     ${LogotypeFragment}

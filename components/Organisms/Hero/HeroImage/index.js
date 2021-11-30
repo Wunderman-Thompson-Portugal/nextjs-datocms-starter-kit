@@ -47,7 +47,7 @@ export const fragment = `
         description
         image {
             responsiveImage(imgixParams: {fit: crop, crop: focalpoint, auto:format, q:60, w: "1200", ar: "1:1"}) {
-                src
+                ...responsiveImageFragment
             }
         }
     }
