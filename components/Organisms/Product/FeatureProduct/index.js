@@ -23,7 +23,13 @@ export default function sectionFeatureProduct(data) {
             {data.product &&
               data.product.media.map((entry) => (
                 <div key="entry.id" className="order-2">
-                  <Image className={`min-h-[30rem]`} data={entry.image} />
+                  <Image className={`max-w-[25rem]`} data={entry.image} />
+                  {entry.color.map((color) => (
+                    <div
+                      style={{ backgroundColor: color.color.hex }}
+                      className="mt-4 w-8 h-8 rounded-full"
+                    ></div>
+                  ))}
                 </div>
               ))}
           </div>
@@ -49,6 +55,12 @@ export const fragment = `
         media{
           ... on PictureRecord {
           id
+          color {
+            name
+            color {
+              hex
+            }
+          } 
           image {
             responsiveImage(imgixParams: { auto:format, q:60, w: "600", ar: "2:1"}) {
               src
