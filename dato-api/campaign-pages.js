@@ -7,11 +7,11 @@ import {
   FeatureProductFragment,
 } from "@/lib/section-fragment";
 
-export async function GetCampaignPage(locale, preview) {
+export async function GetCampaignPage(slug, locale, preview) {
   const data = await fetchAPI(
     `
-    query CampaignPage($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
-        campaignPage(locale: $locale) {
+    query CampaignPage($slug: String, $locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
+        campaignPage(filter: {slug: {eq: $slug}}, locale: $locale) {
         __typename
         id
         title
@@ -38,6 +38,7 @@ export async function GetCampaignPage(locale, preview) {
     {
       preview,
       variables: {
+        slug,
         locale,
       },
     }
