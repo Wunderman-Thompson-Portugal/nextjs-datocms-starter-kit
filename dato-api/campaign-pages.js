@@ -3,7 +3,8 @@ import {
   HeroImageFragment,
   TextImageFragment,
   LogotypeFragment,
-  ProductRangeFragment
+  ProductRangeFragment,
+  FeatureProductFragment,
 } from "@/lib/section-fragment";
 
 export async function GetCampaignPage(locale, preview) {
@@ -23,6 +24,7 @@ export async function GetCampaignPage(locale, preview) {
             ... TextImageFragment
             ... LogotypeFragment
             ... ProductRangeFragment
+            ... FeatureProductFragment
  
         }
       }
@@ -31,6 +33,7 @@ export async function GetCampaignPage(locale, preview) {
     ${TextImageFragment}
     ${LogotypeFragment}
     ${ProductRangeFragment}
+    ${FeatureProductFragment}
 
     `,
     {
