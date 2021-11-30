@@ -63,7 +63,7 @@ export const fragment = `
           } 
           image {
             responsiveImage(imgixParams: { auto:format, q:60, w: "600", ar: "2:1"}) {
-              src
+              ... responsiveImageFragment
             }
           }
           }
