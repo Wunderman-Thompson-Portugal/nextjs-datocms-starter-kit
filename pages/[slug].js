@@ -4,6 +4,7 @@ import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 const Hero = dynamic(() => import("@/components/Organisms/Hero"));
+const Blocks = dynamic(() => import('@/components/Organisms'))
 import { useTranslation } from "next-i18next";
 import { pageHandler } from "@/lib/pages-handler";
 
@@ -14,12 +15,13 @@ import { pageHandler } from "@/lib/pages-handler";
  *
  */
 
-export default function Index({ data }) {
+export default function Index({ data, relations }) {
   const { t } = useTranslation();
 
   return (
     <>
       <Hero data={data.heroBanner} />
+      <Blocks  sections={data.sections} relations={relations}></Blocks>
       <div>{t("testTranslation")}</div>
     </>
   );

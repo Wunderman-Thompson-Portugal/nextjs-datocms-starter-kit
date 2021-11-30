@@ -1,5 +1,5 @@
 import { fetchAPI, fetchPages } from "@/lib/api";
-import { HeroImageFragment } from "@/lib/section-fragment";
+import { HeroImageFragment, TextImageFragment } from "@/lib/section-fragment";
 
 export async function GetCampaignPage(locale, preview) {
   const data = await fetchAPI(
@@ -15,10 +15,12 @@ export async function GetCampaignPage(locale, preview) {
         }
         sections{
             __typename
+            ... TextImageFragment
         }
       }
     }
     ${HeroImageFragment}
+    ${TextImageFragment}
     `,
     {
       preview,
