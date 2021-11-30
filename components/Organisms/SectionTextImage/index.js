@@ -1,5 +1,9 @@
 import Image from "@/components/Atoms/Image";
-import ReactMarkdown from "react-markdown";
+import dynamic from "next/dynamic";
+
+const TextImageCopy = dynamic(() =>
+  import("@/components/Molecules/textImageCopy").then((c) => c.TextImageCopy)
+);
 
 export default function SectionTextImage(data) {
   return (
@@ -9,12 +13,7 @@ export default function SectionTextImage(data) {
           <Image classNameName={``} data={data.image} />
         </div>
         <div className="col-span-1">
-          {data.addHeader && (
-            <h3 className="text-3xl font-semibold">{data.title}</h3>
-          )}
-          <ReactMarkdown className=" text-base leading-relaxed text-blueGray-500">
-            {data.content}
-          </ReactMarkdown>
+          <TextImageCopy data={data} />
         </div>
       </div>
     </section>
