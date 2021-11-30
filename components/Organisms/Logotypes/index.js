@@ -12,7 +12,7 @@ export default function SectionLogotype(data) {
   return (
     <>
     <SubSectionHeader data={data} />
-      <div class="sm:flex flex-wrap justify-center items-center text-center gap-8 ">
+      <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 ">
         {data.products &&
           data.products.map((entry) => <LogotypeCard data={entry} />)}
       </div>

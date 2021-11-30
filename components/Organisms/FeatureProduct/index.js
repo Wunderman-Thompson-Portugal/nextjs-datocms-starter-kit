@@ -16,7 +16,7 @@ export default function sectionFeatureProduct(data) {
             <FeatureProductHeader data={data} />
             {data.product &&
               data.product.media.map((entry) => (
-                <div className="order-2">
+                <div key="entry.id" className="order-2">
                   <Image className={`min-h-[30rem]`} data={entry.image} />
                 </div>
               ))}
@@ -37,6 +37,7 @@ export const fragment = `
       content
       addHeader
       product {
+        id
         title
         description
         media{
