@@ -7,3 +7,4 @@ out/
 package-lock.json
 .vercel
 .DS_Store
+yarn-error.log

@@ -7,9 +7,9 @@ export default function GenericFooter({ children }) {
         return <></>;
 
     return (
-        <footer className={`bg-gray-100`}>
+        <footer className={`bg-gray-500 p-6`}>
             <div className={`max-w-6xl mx-auto px-4`}>
-                Footer
+                <p className={`text-white text-sm mt-48 mb-4`}>Copyright © 2021 | All rights reserved</p>
             </div>
         </footer>
     )
