@@ -28,7 +28,11 @@ export default function Index({ data, relations }) {
 }
 
 export async function getStaticProps(context) {
-  const result = await GetCampaignPage(context.locale, context.preview);
+  const result = await GetCampaignPage(
+    context.params.slug,
+    context.locale,
+    context.preview
+  );
   const pageData = await pageHandler(
     context,
     serverSideTranslations,
