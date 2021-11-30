@@ -35,7 +35,7 @@ export default function sectionFeatureProduct(data) {
             {data.product &&
               data.product.media.map((entry) => (
                 <div className="order-2">
-                  <Image classNameName={``} data={entry.image} />
+                  <Image className={`min-h-[30rem]`} data={entry.image} />
                 </div>
               ))}
           </div>
@@ -61,7 +61,7 @@ export const fragment = `
           ... on PictureRecord {
           id
           image {
-            responsiveImage(imgixParams: {fit: clamp, auto:format, q:60, w: "600", ar: "2:1"}) {
+            responsiveImage(imgixParams: { auto:format, q:60, w: "600", ar: "2:1"}) {
               src
             }
           }
