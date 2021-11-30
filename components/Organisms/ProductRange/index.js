@@ -1,15 +1,15 @@
-export default function SectionTextImage(data) {
+export default function ProductRange(data) {
   return (
     <>
-      <p>{data.id}</p>
+      <p>{data.title}</p>
     </>
   );
 }
 
 export const fragment = `
-    fragment TextImageFragment on SectionTextImageRecord{
+    fragment ProductRangeFragment on SectionProductRangeRecord{
       __typename
       id
-     
+      title
   }
 `;

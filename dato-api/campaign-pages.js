@@ -2,7 +2,8 @@ import { fetchAPI, fetchPages } from "@/lib/api";
 import {
   HeroImageFragment,
   TextImageFragment,
-  LogotypeFragment
+  LogotypeFragment,
+  ProductRangeFragment
 } from "@/lib/section-fragment";
 
 export async function GetCampaignPage(locale, preview) {
@@ -21,6 +22,7 @@ export async function GetCampaignPage(locale, preview) {
             __typename
             ... TextImageFragment
             ... LogotypeFragment
+            ... ProductRangeFragment
  
         }
       }
@@ -28,6 +30,7 @@ export async function GetCampaignPage(locale, preview) {
     ${HeroImageFragment}
     ${TextImageFragment}
     ${LogotypeFragment}
+    ${ProductRangeFragment}
 
     `,
     {
