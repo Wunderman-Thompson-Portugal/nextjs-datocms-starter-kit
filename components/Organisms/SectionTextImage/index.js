@@ -32,7 +32,7 @@ export const fragment = `
       addHeader
       content
       image {
-        responsiveImage(imgixParams: {crop: focalpoint, auto:format, q:60, w: "800"}) {
+        responsiveImage(imgixParams: {fit: crop, crop: focalpoint, auto:format, q:60, w: "1000", ar: "2:1"}) {
             src
         }
     }
