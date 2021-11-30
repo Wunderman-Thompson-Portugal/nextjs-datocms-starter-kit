@@ -17,7 +17,7 @@ export default function HeroImage(data) {
         <div className="flex-col md:flex-row flex items-center mx-5 my-16">
           <div className="w-full">
             <div className="relative -mx-5 sm:mx-0">
-                <Image className={`min-h-[30rem] w-full ${styles.overlayBg}`} data={data.image} />
+                <Image className={`min-h-[30rem] w-full`} data={data.image} />
             </div>
           </div>
         </div>
