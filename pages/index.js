@@ -23,7 +23,7 @@ export default function Index({ data }) {
 }
 
 export async function getStaticProps(context) {
-  const result = await getHomePage(context.locale, context.preview);
+  const result = []
   const pageData = await pageHandler(
     context,
     serverSideTranslations,

@@ -22,7 +22,6 @@ export default function Index({ data, relations }) {
     <>
       <Hero data={data.heroBanner} />
       <Blocks  sections={data.sections} relations={relations}></Blocks>
-      <div>{t("testTranslation")}</div>
     </>
   );
 }
