@@ -12,7 +12,7 @@ export default function sectionFeatureProduct(data) {
     <>
       <div className="py-16">
         <div className="container m-auto px-6">
-          <div className="lg:flex justify-between items-center">
+          <div className={` ${data.order == "Content first" ? "flex-row" : "flex-row-reverse"} lg:flex justify-between items-center`}>
             <FeatureProductHeader data={data} />
             {data.product &&
               data.product.media.map((entry) => (
