@@ -4,10 +4,15 @@ const LogotypeCard = dynamic(() =>
   import("@/components/Molecules/LogotypeCard").then((c) => c.LogotypeCard)
 );
 
+const SubSectionHeader  = dynamic(() =>
+  import("@/components/Molecules/SubSectionHeader").then((c) => c.SubSectionHeader)
+);
+
 export default function SectionLogotype(data) {
   return (
     <>
-      <div class="sm:flex flex-wrap justify-center items-center text-center gap-8 py-12">
+    <SubSectionHeader data={data} />
+      <div class="sm:flex flex-wrap justify-center items-center text-center gap-8 ">
         {data.products &&
           data.products.map((entry) => <LogotypeCard data={entry} />)}
       </div>
@@ -20,6 +25,7 @@ export const fragment = `
       __typename
       id
       title
+      subtitle
       products {
         id
         description

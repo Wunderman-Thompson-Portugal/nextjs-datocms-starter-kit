@@ -5,3 +5,11 @@ export function HeadlineH3({ copy, className }) {
     </>
   );
 }
+
+export function HeadlineH2({ copy, className }) {
+  return (
+    <>
+      <h2 className={className}>{copy}</h2>
+    </>
+  );
+}
