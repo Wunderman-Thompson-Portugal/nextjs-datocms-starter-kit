@@ -16,11 +16,11 @@ export function SubSectionHeader(props) {
         <div className="text-center w-full mx-auto py-12 px-4 sm:px-6  z-20">
           <HeadlineH2
             copy={props.data.title}
-            classNameName="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
+            className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
           />
           <Subtitle
             copy={props.data.subtitle}
-            classNameName=" mt-6 text-base block text-indigo-500 max-w-[80%] mx-auto"
+            className=" mt-6 text-base block text-indigo-500 max-w-[80%] mx-auto"
           />
         </div>
       </div>
