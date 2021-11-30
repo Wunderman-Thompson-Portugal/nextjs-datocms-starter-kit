@@ -1,25 +1,41 @@
-import { Image } from 'react-datocms'
+import { Image } from "react-datocms";
 
-export default function CustomImage({ data, className, ariaHidden, draggable }) {
+export default function CustomImage({
+  data,
+  className,
+  ariaHidden,
+  draggable,
+}) {
+  if (!data) {
+    return <></>;
+  }
 
-    if ( ! data ) {
-        return <></>
-    }
-
-    if ( ! data.responsiveImage ) {
-        return <img src={data.url} className={className} draggable={draggable} loading={'lazy'} aria-hidden={ariaHidden}></img>
-    }
-
+  if (!data.responsiveImage) {
     return (
-        <Image
-            data={{
-                ...data.responsiveImage,
-                alt: ariaHidden ? '' : data.alt,
-            }}
-            className={className}
-            fadeInDuration={10}
-            lazyLoad={true}
-            style={className === undefined ? {maxWidth: `${data.responsiveImage.width}px`, margin: 'auto'} : {}}
-        />
-    )
+      <img
+        src={data.url}
+        className={className}
+        draggable={draggable}
+        loading={"lazy"}
+        aria-hidden={ariaHidden}
+      ></img>
+    );
+  }
+
+  return (
+    <Image
+      data={{
+        ...data.responsiveImage,
+        alt: ariaHidden ? "" : data.alt,
+      }}
+      className={className}
+      fadeInDuration={10}
+      lazyLoad={true}
+      style={
+        className === undefined
+          ? { maxWidth: `${data.responsiveImage.width}px`, margin: "auto" }
+          : {}
+      }
+    />
+  );
 }
