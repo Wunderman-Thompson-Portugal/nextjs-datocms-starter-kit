@@ -15,7 +15,7 @@ export default function ProductRange(data) {
     <>
       <SubSectionHeader data={data} />
       {data.products && (
-        <div className="w-full flex flex-row px-4 pt-12 pb-4 bg-white mt-6  shadow-lg rounded-lg dark:bg-gray-800">
+        <div className="w-full grid grid-cols-3 px-4 pt-4 pb-4">
           {data.products.map((entry) => (
             <ProductCard key={entry.id} data={entry} />
           ))}
@@ -39,7 +39,7 @@ export const fragment = `
           ... on PictureRecord {
             id
             image {
-              responsiveImage {
+              responsiveImage(imgixParams: { auto:format, q:60, w: "100", ar: "2:1"}) {
               ... responsiveImageFragment
               }
       
