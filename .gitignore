@@ -4,7 +4,6 @@
 node_modules/
 out/
 .env.local
-yarn.lock
 package-lock.json
-
 .vercel
+.DS_Store
