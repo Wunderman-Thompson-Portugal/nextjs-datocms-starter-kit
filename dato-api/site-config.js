@@ -4,6 +4,15 @@ export const siteConfigurationQuery = `
   siteConf(filter: {configId: {eq: "${process.env.WEBSITE_CONFIG_ID}"}}, locale: $locale) {
     id
     websiteName
+    headerConf {
+      logotype {
+        title
+        url
+      }
+    }
+    footerConf {
+      id
+    }
 }
 
 `;
