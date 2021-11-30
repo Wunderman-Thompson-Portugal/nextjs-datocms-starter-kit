@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 
-export function Praragraph(props) {
+export function Paragraph(props) {
   return (
     <>
       <ReactMarkdown className=" text-base leading-relaxed">
