@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+
 import Image from "@/components/Atoms/Image";
 import dynamic from "next/dynamic";
 
@@ -12,7 +14,11 @@ export default function sectionFeatureProduct(data) {
     <>
       <div className="py-16">
         <div className="container m-auto px-6">
-          <div className={` ${data.order == "Content first" ? "flex-row" : "flex-row-reverse"} lg:flex justify-between items-center`}>
+          <div
+            className={` ${
+              data.order == "Content first" ? "flex-row" : "flex-row-reverse"
+            } lg:flex justify-between items-center`}
+          >
             <FeatureProductHeader data={data} />
             {data.product &&
               data.product.media.map((entry) => (

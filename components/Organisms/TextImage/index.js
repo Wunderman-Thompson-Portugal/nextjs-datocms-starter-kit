@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+
 import Image from "@/components/Atoms/Image";
 import dynamic from "next/dynamic";
 

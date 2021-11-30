@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+
 import styles from "./index.module.scss";
 import ReactMarkdown from "react-markdown";
 import Image from "@/components/Atoms/Image";
@@ -18,10 +20,9 @@ export default function HeroImage(data) {
               <h1 className=" font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight mb-6">
                 {data.title}
               </h1>
-              <ReactMarkdown className="prose prose-sm max-w-none">  
+              <ReactMarkdown className="prose prose-sm max-w-none">
                 {data.description}
               </ReactMarkdown>
-              
             </div>
 
             {/* hero image */}

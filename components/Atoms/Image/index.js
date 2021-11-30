@@ -12,8 +12,10 @@ export default function CustomImage({
 
   if (!data.responsiveImage) {
     return (
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         src={data.url}
+        alt={data.alt}
         className={className}
         draggable={draggable}
         loading={"lazy"}
@@ -23,6 +25,7 @@ export default function CustomImage({
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image
       data={{
         ...data.responsiveImage,
