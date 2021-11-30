@@ -31,16 +31,17 @@ export async function GetCampaignPage(locale, preview) {
 }
 
 export async function getAllCampaignPages() {
-  const data = fetchPages(
-    `
+  const data = fetchAPI(
+    ` 
+    query AllCampaignPages {
       allCampaignPages {
         _allSlugLocales {
           locale
           value
         }
       }
-    `,
-    "allCampaignPages"
+    }
+  `
   );
   return data;
 }

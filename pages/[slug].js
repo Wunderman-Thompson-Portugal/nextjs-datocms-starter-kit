@@ -45,7 +45,8 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths(context) {
     const records = await getAllCampaignPages();
-    let paths = createPagePaths(records, context);
+    console.log(records)
+    let paths = createPagePaths(records?.allCampaignPages, context);
   
     return {
       paths: paths || [],
