@@ -1,8 +1,22 @@
+import Image from "@/components/Atoms/Image";
+
 export default function SectionTextImage(data) {
   return (
-    <>
-      <p>{data.content}</p>
-    </>
+    <section className="relative pt-12 bg-blueGray-50">
+      <div className="grid grid-cols-2 gap-10">
+        <div className="col-span-1">
+          <Image classNameName={``} data={data.image} />
+        </div>
+        <div className="col-span-1">
+          {data.addHeader && (
+            <h3 className="text-3xl font-semibold">{data.title}</h3>
+          )}
+          <p className=" text-lg leading-relaxed text-blueGray-500">
+            {data.content}
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -11,14 +25,16 @@ export const fragment = `
       __typename
       title
       subtitle
-      image {
-        id
-      }
       id
       cta {
         id
       }
       addHeader
       content
+      image {
+        responsiveImage(imgixParams: {crop: focalpoint, auto:format, q:60, w: "800", ar: "1:1"}) {
+            src
+        }
+    }
   }
 `;

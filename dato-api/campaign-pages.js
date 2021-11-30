@@ -34,7 +34,6 @@ export async function GetCampaignPage(locale, preview) {
     ${LogotypeFragment}
     ${ProductRangeFragment}
     ${FeatureProductFragment}
-
     `,
     {
       preview,
