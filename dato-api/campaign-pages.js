@@ -16,6 +16,11 @@ export async function GetCampaignPage(slug, locale, preview) {
         __typename
         id
         title
+        _seoMetaTags {
+          attributes
+          content
+          tag
+        }
         heroBanner {
           __typename
           ... HeroImageFragment

@@ -5,6 +5,11 @@ export const siteConfigurationQuery = `
     id
     configId
     websiteName
+    _seoMetaTags {
+      tag
+      content
+      attributes
+    }
     headerConf {
       logotype {
         title
