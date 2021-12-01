@@ -17,7 +17,7 @@ export default function SectionTextImage(data) {
             data.order == "Image first" ? "order-1" : "order-2"
           }  col-span-2 md:col-span-1`}
         >
-          <Image className={``} data={data.image} />
+          <Image data={data.image} className={`rounded-lg shadow`} />
         </div>
         <div
           className={`${
