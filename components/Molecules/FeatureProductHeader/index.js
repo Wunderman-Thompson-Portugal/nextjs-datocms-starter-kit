@@ -15,7 +15,7 @@ const Paragraph = dynamic(() =>
 export function FeatureProductHeader(props) {
   return (
     <>
-      <div className="lg:w-6/12 lg:p-0 p-7">
+      <div className="lg:w-6/12 py-7 lg:p-0 ">
         <HeadlineH2
           className="text-4xl font-sans font-bold leading-tight mb-5 capitalize"
           copy={props.data.title}

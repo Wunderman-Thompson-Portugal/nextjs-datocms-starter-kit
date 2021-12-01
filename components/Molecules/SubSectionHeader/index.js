@@ -19,7 +19,7 @@ export function SubSectionHeader(props) {
           />
           <Subtitle
             copy={props.data.subtitle}
-            className=" mt-6 text-base font-sans  block  max-w-[80%] mx-auto"
+            className=" mt-6 text-base font-sans  block max-w-2xl mx-auto"
           />
         </div>
       </div>

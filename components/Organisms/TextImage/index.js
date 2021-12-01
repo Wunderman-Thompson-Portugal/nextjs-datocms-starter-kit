@@ -17,7 +17,7 @@ export default function SectionTextImage(data) {
             data.order == "Image first" ? "order-1" : "order-2"
           }  col-span-2 md:col-span-1`}
         >
-          <Image className={`${styles.overlayBg}`} data={data.image} />
+          <Image className={``} data={data.image} />
         </div>
         <div
           className={`${
@@ -44,7 +44,7 @@ export const fragment = `
       content
       order
       image {
-        responsiveImage(imgixParams: {fit: crop, crop: focalpoint, auto:format, q:60, w: "1000", ar: "2:1"}) {
+        responsiveImage(imgixParams: {fit: crop, crop: focalpoint, auto:format, q:60, w: "1000", ar: "3:2"}) {
           ...responsiveImageFragment
         }
     }

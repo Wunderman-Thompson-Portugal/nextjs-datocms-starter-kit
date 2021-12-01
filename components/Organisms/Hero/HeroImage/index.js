@@ -10,11 +10,11 @@ export default function HeroImage(data) {
   return (
     <>
       {/* hero */}
-      <div className="hero bg-gray-100">
+      <div className="hero bg-gray-200 rounded-xl overflow-hidden">
         {/* container */}
-        <div className="container pt-8 md:pt-0 pl-0 sm:pl-8 lg:pl-16 xl:pl-20 mx-auto">
+        <div className="container pt-8 pl-0 md:pt-0 md:pl-8 lg:pl-16 xl:pl-20 max-w-full ">
           {/* hero wrapper */}
-          <div className="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-8 items-center ">
             {/* hero text */}
             <div className="hero-text col-span-6  px-4 md:px-0">
               <h1 className=" font-sans font-bold  text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight mb-6">
@@ -26,11 +26,8 @@ export default function HeroImage(data) {
             </div>
 
             {/* hero image */}
-            <div className="relative hero-image col-span-6 z-10 min-h-[15rem] md:min-h-[50vh]">
-              <Image
-                className={`min-h-[15rem] md:min-h-[50vh] w-full`}
-                data={data.image}
-              />
+            <div className="relative hero-image col-span-6 z-10 ">
+              <Image className={`w-full`} data={data.image} />
             </div>
           </div>
         </div>

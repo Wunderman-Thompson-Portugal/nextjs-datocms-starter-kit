@@ -39,7 +39,7 @@ export const fragment = `
           ... on PictureRecord {
             id
             image {
-              responsiveImage(imgixParams: { auto:format, q:60, w: "100", ar: "2:1"}) {
+              responsiveImage(imgixParams: { fit:fillmax, fill:solid, crop: focalpoint, auto:format, q:60, w: "320", h:"320"}) {
               ... responsiveImageFragment
               }
       

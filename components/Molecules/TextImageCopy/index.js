@@ -11,8 +11,15 @@ const Paragraph = dynamic(() =>
 export function TextImageCopy(props) {
   return (
     <>
-      {props.data.addHeader && <HeadlineH3 className="text-xl" copy={props.data.title} />}
-      {props.data.content && <Paragraph copy={props.data.content} />}
+      {props.data.addHeader && (
+        <HeadlineH3 className="text-xl" copy={props.data.title} />
+      )}
+      {props.data.content && (
+        <Paragraph
+          copy={props.data.content}
+          className={`md:max-w-md mx-auto`}
+        />
+      )}
     </>
   );
 }
