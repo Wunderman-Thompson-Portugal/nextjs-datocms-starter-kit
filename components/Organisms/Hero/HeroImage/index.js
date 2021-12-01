@@ -15,7 +15,7 @@ export default function HeroImage(data) {
         <div
           className={`${
             data.alignment == "Left"
-              ? "pt-10 md:pl-8 lg:pl-16 xl:pl-20 "
+              ? "pt-10 md:pl-8 md:pt-0 lg:pl-16 xl:pl-20 "
               : "pb-10 md:pr-8 lg:pr-16 xl:pr-20"
           } container pl-0 md:pb-0   max-w-full`}
         >
