@@ -12,7 +12,7 @@ export function LogotypeCard(props) {
     <>
       <div
         key={props.key}
-        className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 pt-12 pb-4 bg-white mt-6  shadow-lg rounded-lg dark:bg-gray-800"
+        className="w-full flex-col md:w-1/3 lg:w-1/4 py-9 transition bg-white hover:bg-gray-50 mt-6  shadow rounded dark:bg-gray-800"
       >
         <div className="flex-shrink-0">
           <div className="flex items-center mx-auto justify-center h-24 w-24 ">
@@ -21,7 +21,7 @@ export function LogotypeCard(props) {
         </div>
         {props.data.description && (
           <Paragraph
-            className="mt-12 font-sans  text-sm"
+            className="mt-12 font-sans px-8 prose-sm leading-snug transition text-gray-400 hover:text-gray-800"
             copy={props.data.description}
           />
         )}
