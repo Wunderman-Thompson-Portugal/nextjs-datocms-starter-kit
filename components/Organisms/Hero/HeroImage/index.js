@@ -15,12 +15,12 @@ export default function HeroImage(data) {
         <div
           className={`${
             data.alignment == "Left"
-              ? "md:pl-8 lg:pl-16 xl:pl-20"
-              : "md:pr-8 lg:pr-16 xl:pr-20"
-          } container pt-8 pl-0 md:pt-0   max-w-full`}
+              ? "pt-10 md:pl-8 lg:pl-16 xl:pl-20 "
+              : "pb-10 md:pr-8 lg:pr-16 xl:pr-20"
+          } container pl-0 md:pb-0   max-w-full`}
         >
           {/* hero wrapper */}
-          <div className="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-20 items-center ">
+          <div className="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center ">
             {/* hero text */}
             <div
               className={`${
