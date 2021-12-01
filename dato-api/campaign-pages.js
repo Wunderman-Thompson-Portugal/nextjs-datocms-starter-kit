@@ -49,7 +49,7 @@ export async function GetCampaignPage(slug, locale, preview) {
   return data;
 }
 
-export async function getAllCampaignPages(id) {
+export async function getAllCampaignPages() {
 
   return getSiteId()
     .then(website => {
