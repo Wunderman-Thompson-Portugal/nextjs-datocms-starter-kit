@@ -4,8 +4,8 @@ import Head from "next/head";
 
 export default function MainLayout({ children }) {
   const header = children.props?.siteConfig?.headerConf;
-  const pageMetaTags = children.props?.data._seoMetaTags;
-  const siteMetaTags = children.props?.siteConfig._seoMetaTags;
+  const pageMetaTags = children.props?.data?._seoMetaTags;
+  const siteMetaTags = children.props?.siteConfig?._seoMetaTags;
   const siteTitle = siteMetaTags?.filter(meta => meta.tag === 'title')?.map(meta => meta.content)
 
   return (
