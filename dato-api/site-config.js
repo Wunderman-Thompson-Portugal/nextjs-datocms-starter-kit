@@ -1,12 +1,14 @@
 import { fetchAPI } from "@/lib/api";
 
 export const siteConfigurationQuery = `
-  siteConf(filter: {configId: {eq: "${process.env.WEBSITE_CONFIG_ID}"}}, locale: $locale) {
+  siteConfig(filter: {configId: {eq: "${process.env.WEBSITE_CONFIG_ID}"}}, locale: $locale) {
     id
+    configId
     websiteName
     headerConf {
       logotype {
         title
+        alt
         url
       }
     }
@@ -20,7 +22,7 @@ export const siteConfigurationQuery = `
 export async function getSiteConfiguration(locale, preview) {
   const data = await fetchAPI(
     `
-          query siteConf($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
+          query siteConfig($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
             
               ${siteConfigurationQuery}
             }

@@ -21,7 +21,7 @@ import { pageHandler } from "@/lib/pages-handler";
 
 export default function Index({ siteConfig, data, relations }) {
   const { t } = useTranslation();
-  console.log(siteConfig)
+  console.log(siteConfig);
 
   return (
     <>
