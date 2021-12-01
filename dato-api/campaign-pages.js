@@ -63,13 +63,8 @@ export async function getAllCampaignPages() {
           }
         }
       }
-    `,
-        {
-          variables: {
-            id
-          },
-        }
-      );
+    `
+    );
       return data;
     })
 }
