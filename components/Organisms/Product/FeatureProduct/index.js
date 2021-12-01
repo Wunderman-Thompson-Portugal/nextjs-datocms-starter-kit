@@ -24,7 +24,7 @@ export default function sectionFeatureProduct(data) {
             {data.product &&
               data.product.media.map((entry) => (
                 <div key="entry.id" className="order-2">
-                  <Image className={`max-w-[25rem]`} data={entry.image} />
+                  <Image className={`max-w-md`} data={entry.image} />
                   {entry.color.map((color) => (
                     <div
                       style={{ backgroundColor: color.color.hex }}
