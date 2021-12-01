@@ -17,10 +17,10 @@ export default function HeroImage(data) {
           <div className="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* hero text */}
             <div className="hero-text col-span-6  px-4 md:px-0">
-              <h1 className=" font-bold  text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight mb-6">
+              <h1 className=" font-sans font-bold  text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight mb-6">
                 {data.title}
               </h1>
-              <ReactMarkdown className="prose prose-sm max-w-none">
+              <ReactMarkdown className="font-sans prose prose-sm max-w-none">
                 {data.description}
               </ReactMarkdown>
             </div>
