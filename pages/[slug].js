@@ -1,10 +1,13 @@
-import { GetCampaignPage, getAllCampaignPages } from "@/dato-api/campaign-pages";
+import {
+  GetCampaignPage,
+  getAllCampaignPages,
+} from "@/dato-api/campaign-pages";
 import { createPagePaths, fetchComponentRelations } from "@/lib/api";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 const Hero = dynamic(() => import("@/components/Organisms/Hero"));
-const Blocks = dynamic(() => import('@/components/Organisms'))
+const Blocks = dynamic(() => import("@/components/Organisms"));
 import { useTranslation } from "next-i18next";
 import { pageHandler } from "@/lib/pages-handler";
 
@@ -15,13 +18,13 @@ import { pageHandler } from "@/lib/pages-handler";
  *
  */
 
-export default function Index({ data, relations }) {
+export default function Index({ siteConfig, data, relations }) {
   const { t } = useTranslation();
 
   return (
     <>
       <Hero data={data.heroBanner} />
-      <Blocks  sections={data.sections} relations={relations}></Blocks>
+      <Blocks sections={data.sections} relations={relations}></Blocks>
     </>
   );
 }
@@ -49,12 +52,12 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths(context) {
-    const records = await getAllCampaignPages();
-    console.log(records)
-    let paths = createPagePaths(records?.allCampaignPages, context);
-  
-    return {
-      paths: paths || [],
-      fallback: false,
-    };
-  }
+  const records = await getAllCampaignPages();
+  console.log(records);
+  let paths = createPagePaths(records?.allCampaignPages, context);
+
+  return {
+    paths: paths || [],
+    fallback: false,
+  };
+}
