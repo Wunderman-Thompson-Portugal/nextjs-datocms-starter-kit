@@ -47,16 +47,28 @@ export default function GenericHeader(props) {
 
       {/* Add JS to open and close mobile menu https://github.com/Wunderman-Thompson-Portugal/html-starter-kit/blob/main/public/js/app.js */}
       <div className={`mobile-menu md:hidden ${!activeMenu && "hidden"}`}>
-        <a href="#" className={`block py-2 px-4 text-sm hover:bg-gray-200`}>
+        <a
+          href="#"
+          className={`block py-2 font-sans px-4 text-sm hover:bg-gray-200`}
+        >
           Features
         </a>
-        <a href="#" className={`block py-2 px-4 text-sm hover:bg-gray-200`}>
+        <a
+          href="#"
+          className={`block py-2 font-sans px-4 text-sm hover:bg-gray-200`}
+        >
           Pricing
         </a>
-        <a href="#" className={`block py-2 px-4 text-sm hover:bg-gray-200`}>
+        <a
+          href="#"
+          className={`block py-2 font-sans px-4 text-sm hover:bg-gray-200`}
+        >
           Login
         </a>
-        <a href="#" className={`block py-2 px-4 text-sm hover:bg-gray-200`}>
+        <a
+          href="#"
+          className={`block py-2 font-sans px-4 text-sm hover:bg-gray-200`}
+        >
           Signup
         </a>
       </div>
