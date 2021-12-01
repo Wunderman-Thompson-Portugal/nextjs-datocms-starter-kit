@@ -13,7 +13,7 @@ const FeatureProductHeader = dynamic(() =>
 export default function sectionFeatureProduct(data) {
   return (
     <>
-      <div className="py-16">
+      <div className="my-24">
         <div className="container m-auto px-6">
           <div
             className={` ${

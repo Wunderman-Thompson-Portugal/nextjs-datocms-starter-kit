@@ -13,7 +13,7 @@ const SubSectionHeader = dynamic(() =>
 export default function SectionLogotype(data) {
   return (
     <>
-      <div className="my-8">
+      <div className="my-24">
         <SubSectionHeader data={data} />
         <div className="sm:flex flex-wrap justify-center items-center text-center gap-10">
           {data.products &&
