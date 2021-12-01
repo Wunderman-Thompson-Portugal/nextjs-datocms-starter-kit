@@ -51,9 +51,10 @@ export async function GetCampaignPage(slug, locale, preview) {
 
 export async function getAllCampaignPages(id) {
 
-  return getSiteId().then(website => {
-    const data = fetchAPI(
-      ` 
+  return getSiteId()
+    .then(website => {
+      const data = fetchAPI(
+        ` 
       query AllCampaignPages($id: ItemId = ${website.id}) {
         allCampaignPages(filter: {website: {eq: $id}}) {
           _allSlugLocales {
@@ -63,14 +64,12 @@ export async function getAllCampaignPages(id) {
         }
       }
     `,
-    {
-      variables: {
-        id
-      },
-    }
-    );
-    return data;
-  })
-
-  
+        {
+          variables: {
+            id
+          },
+        }
+      );
+      return data;
+    })
 }
