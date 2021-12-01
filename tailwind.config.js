@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
-  mode: 'jit',
+  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  //mode: 'jit',
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -34,12 +34,12 @@ module.exports = {
         lg: {
           css: {
             img: {
-              marginTop: '0',
-              marginBottom: '0',
+              marginTop: "0",
+              marginBottom: "0",
             },
           },
         },
-      }
+      },
     },
   },
   variants: {
