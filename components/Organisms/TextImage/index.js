@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-
+import styles from './index.module.scss';
 import Image from "@/components/Atoms/Image";
 import dynamic from "next/dynamic";
 
@@ -10,19 +10,19 @@ const TextImageCopy = dynamic(() =>
 export default function SectionTextImage(data) {
   console.log(data);
   return (
-    <section className="relative pt-12 bg-blueGray-50">
+    <section className="relative mt-12 bg-blueGray-50">
       <div className="grid grid-cols-2 gap-10">
         <div
           className={` ${
             data.order == "Image first" ? "order-1" : "order-2"
-          } col-span-2 lg:col-span-1`}
+          }  col-span-2 md:col-span-1 h-60`}
         >
-          <Image classNameName={``} data={data.image} />
+          <Image className={`${styles.overlayBg}`} data={data.image} />
         </div>
         <div
           className={`${
             data.order == "Image first" ? "order-2" : "order-1"
-          } col-span-2 md:col-span-1`}
+          } col-span-2 md:col-span-1 self-center`}
         >
           <TextImageCopy data={data} />
         </div>

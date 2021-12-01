@@ -1,0 +1,11 @@
+
+.overlayBg {
+  top: 0;
+  height: 100%;
+  z-index: -1;
+
+  img {
+    object-fit: cover;
+    object-position: top;
+  }
+}

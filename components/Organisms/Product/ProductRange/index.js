@@ -15,7 +15,7 @@ export default function ProductRange(data) {
     <>
       <SubSectionHeader data={data} />
       {data.products && (
-        <div className="w-full grid grid-cols-3 px-4 pt-4 pb-4">
+        <div className="w-full grid grid-cols-3 px-4 pt-4 pb-4 gap-10">
           {data.products.map((entry) => (
             <ProductCard key={entry.id} data={entry} />
           ))}
