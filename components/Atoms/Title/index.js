@@ -1,7 +1,7 @@
 export function HeadlineH3({ copy, className }) {
   return (
     <>
-      <h3 className={className}>{copy}</h3>
+      <h3 className={`font-sans ${className}`}>{copy}</h3>
     </>
   );
 }
@@ -9,7 +9,7 @@ export function HeadlineH3({ copy, className }) {
 export function HeadlineH2({ copy, className }) {
   return (
     <>
-      <h2 className={className}>{copy}</h2>
+      <h2 className={`font-sans ${className}`}>{copy}</h2>
     </>
   );
 }

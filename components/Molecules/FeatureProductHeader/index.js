@@ -17,7 +17,7 @@ export function FeatureProductHeader(props) {
     <>
       <div className="lg:w-6/12 lg:p-0 p-7">
         <HeadlineH2
-          className="text-4xl font-bold leading-tight mb-5 capitalize"
+          className="text-4xl font-sans font-bold leading-tight mb-5 capitalize"
           copy={props.data.title}
         />
         {props.data.addHeader && (

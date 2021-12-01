@@ -37,20 +37,7 @@ export default function GenericHeader(props) {
             </div>
 
             {/* PRIMARY NAV */}
-            <div className={`hidden md:flex items-center space-x-1`}>
-              <a
-                href="#"
-                className={`py-5 px-3 text-gray-700 hover:text-gray-900`}
-              >
-                Features
-              </a>
-              <a
-                href="#"
-                className={`py-5 px-3 text-gray-700 hover:text-gray-900`}
-              >
-                Pricing
-              </a>
-            </div>
+            <div className={`hidden md:flex items-center space-x-1`}></div>
           </div>
 
           {/* mobile button goes here */}
