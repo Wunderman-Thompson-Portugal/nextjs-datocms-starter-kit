@@ -7,10 +7,9 @@ import { useRouter } from "next/router";
 import { BurgerMenu } from "@/components/Atoms/Buttons";
 
 export default function GenericHeader(props) {
-
   const [activeMenu, setActiveMenu] = useState(false);
 
-  console.log(props)
+  console.log(props);
 
   const { locale, route } = useRouter();
   const toggleMenu = () => {
@@ -31,10 +30,9 @@ export default function GenericHeader(props) {
                 className={`flex items-center py-5 px-2 text-gray-700 hover:text-gray-900`}
               >
                 <Image
-                  className="w-[120px] sm:w-[150px] md:w-[250px] lg:w-[180px] xl:w-[220px]"
+                  className="w-32 sm:w-36 md:w-40 lg:w-44 xl:w-50"
                   data={props.logotype}
                 />
-                
               </a>
             </div>
 

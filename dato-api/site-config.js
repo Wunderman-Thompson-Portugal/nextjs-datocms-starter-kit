@@ -7,6 +7,9 @@ export const siteConfigurationQuery = `
     websiteName
     headerConf {
       logotype {
+        responsiveImage{
+          ...responsiveImageFragment
+        }
         title
         alt
         url
