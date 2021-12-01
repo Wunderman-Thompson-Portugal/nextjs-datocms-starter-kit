@@ -28,7 +28,7 @@ export default function HeroImage(data) {
             {/* hero image */}
             <div className="relative hero-image col-span-6 z-10 min-h-[15rem] md:min-h-[50vh]">
               <Image
-                className={`min-h-[15rem] md:min-h-[50vh] w-full ${styles.overlayBg}`}
+                className={`min-h-[15rem] md:min-h-[50vh] w-full`}
                 data={data.image}
               />
             </div>
