@@ -28,8 +28,8 @@ export async function GetCampaignPage(slug, locale, preview) {
             ... FeatureProductFragment
  
         }
-        ${siteConfigurationQuery}
       }
+      ${siteConfigurationQuery}
     }
     ${responsiveImageFragment}
     ${HeroImageFragment}

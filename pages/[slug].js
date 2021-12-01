@@ -14,12 +14,14 @@ import { pageHandler } from "@/lib/pages-handler";
 /**
  *
  * @param {array} data Homepage data
+ * @param {array} siteConfig Site configuration necessary to Layout build Header and Footer
  * @returns JSX Element
  *
  */
 
 export default function Index({ siteConfig, data, relations }) {
   const { t } = useTranslation();
+  console.log(siteConfig)
 
   return (
     <>
@@ -44,6 +46,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
+      siteConfig: pageData.siteConfig,
       ...pageData.sst,
       data: { ...pageData.data },
       preview: pageData.preview,

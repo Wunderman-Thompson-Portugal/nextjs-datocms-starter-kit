@@ -20,7 +20,7 @@ export const siteConfigurationQuery = `
 export async function getSiteConfiguration(locale, preview) {
   const data = await fetchAPI(
     `
-          query siteConfiguration($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
+          query siteConf($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) {
             
               ${siteConfigurationQuery}
             }
