@@ -1,5 +1,5 @@
 import { fetchAPI, responsiveImageFragment } from "@/lib/api";
-import { siteConfigurationQuery } from "./site-config";
+import { siteConfigurationQuery, getSiteId } from "./site-config";
 import {
   HeroImageFragment,
   TextImageFragment,
@@ -49,18 +49,28 @@ export async function GetCampaignPage(slug, locale, preview) {
   return data;
 }
 
-export async function getAllCampaignPages() {
-  const data = fetchAPI(
-    ` 
-    query AllCampaignPages {
-      allCampaignPages {
-        _allSlugLocales {
-          locale
-          value
+export async function getAllCampaignPages(id) {
+
+  return getSiteId().then(website => {
+    const data = fetchAPI(
+      ` 
+      query AllCampaignPages($id: ItemId = ${website.id}) {
+        allCampaignPages(filter: {website: {eq: $id}}) {
+          _allSlugLocales {
+            locale
+            value
+          }
         }
       }
+    `,
+    {
+      variables: {
+        id
+      },
     }
-  `
-  );
-  return data;
+    );
+    return data;
+  })
+
+  
 }

@@ -16,7 +16,6 @@ export const siteConfigurationQuery = `
       id
     }
 }
-
 `;
 
 export async function getSiteConfiguration(locale, preview) {
@@ -35,4 +34,18 @@ export async function getSiteConfiguration(locale, preview) {
     }
   );
   return data;
+}
+
+export async function getSiteId() {
+  const data = await fetchAPI(
+    `
+      query siteConfig($locale: SiteLocale = ${process.env.DEFAULT_SITE_LOCALE}) { 
+        siteConfig(filter: {configId: {eq: "${process.env.WEBSITE_CONFIG_ID}"}}, locale: $locale) {
+          id
+          configId
+        }
+      }
+    `
+  );
+  return data?.siteConfig;
 }

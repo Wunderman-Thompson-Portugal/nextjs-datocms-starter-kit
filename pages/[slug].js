@@ -10,6 +10,7 @@ const Hero = dynamic(() => import("@/components/Organisms/Hero"));
 const Blocks = dynamic(() => import("@/components/Organisms"));
 import { useTranslation } from "next-i18next";
 import { pageHandler } from "@/lib/pages-handler";
+import { getSiteId } from "@/dato-api/site-config";
 
 /**
  *
@@ -21,7 +22,6 @@ import { pageHandler } from "@/lib/pages-handler";
 
 export default function Index({ siteConfig, data, relations }) {
   const { t } = useTranslation();
-  console.log(siteConfig);
 
   return (
     <>
@@ -32,6 +32,7 @@ export default function Index({ siteConfig, data, relations }) {
 }
 
 export async function getStaticProps(context) {
+
   const result = await GetCampaignPage(
     context.params.slug,
     context.locale,
@@ -55,8 +56,8 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths(context) {
-  const records = await getAllCampaignPages();
-  console.log(records);
+  const records = await getAllCampaignPages()
+
   let paths = createPagePaths(records?.allCampaignPages, context);
 
   return {
