@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import styles from './index.module.scss';
+import styles from "./index.module.scss";
 import Image from "@/components/Atoms/Image";
 import dynamic from "next/dynamic";
 
@@ -15,7 +15,7 @@ export default function SectionTextImage(data) {
         <div
           className={` ${
             data.order == "Image first" ? "order-1" : "order-2"
-          }  col-span-2 md:col-span-1 h-60`}
+          }  col-span-2 md:col-span-1`}
         >
           <Image className={`${styles.overlayBg}`} data={data.image} />
         </div>
@@ -45,7 +45,7 @@ export const fragment = `
       order
       image {
         responsiveImage(imgixParams: {fit: crop, crop: focalpoint, auto:format, q:60, w: "1000", ar: "2:1"}) {
-            src
+          ...responsiveImageFragment
         }
     }
   }

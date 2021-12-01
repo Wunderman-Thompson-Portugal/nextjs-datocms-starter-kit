@@ -34,7 +34,7 @@ export default function GenericHeader(props) {
                   className="w-[120px] sm:w-[150px] md:w-[250px] lg:w-[180px] xl:w-[220px]"
                   data={props.logotype}
                 />
-                <span className={`font-bold`}>Wunderman Thompson Portugal</span>
+                
               </a>
             </div>
 
