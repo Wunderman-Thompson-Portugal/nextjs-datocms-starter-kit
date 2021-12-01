@@ -8,7 +8,7 @@ const TextImageCopy = dynamic(() =>
 );
 
 export default function SectionTextImage(data) {
-  console.log(data);
+
   return (
     <section className="my-24 bg-blueGray-50">
       <div className="grid grid-cols-2 gap-10">

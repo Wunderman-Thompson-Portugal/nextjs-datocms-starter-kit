@@ -8,7 +8,7 @@ const Paragraph = dynamic(() =>
 );
 
 export function ProductCard(props) {
-  console.log(props);
+
   return (
     <>
       <div className="col-span-1">

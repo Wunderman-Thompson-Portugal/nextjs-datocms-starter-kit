@@ -6,7 +6,7 @@ import Image from "@/components/Atoms/Image";
 import { AppleIcon, AndroidIcon } from "@/components/Atoms/Vectors";
 
 export default function HeroImage(data) {
-  console.log(data);
+
   return (
     <>
       {/* hero */}

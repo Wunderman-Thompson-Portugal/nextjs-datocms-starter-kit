@@ -9,8 +9,6 @@ import { BurgerMenu } from "@/components/Atoms/Buttons";
 export default function GenericHeader(props) {
   const [activeMenu, setActiveMenu] = useState(false);
 
-  console.log(props);
-
   const { locale, route } = useRouter();
   const toggleMenu = () => {
     setActiveMenu(!activeMenu);

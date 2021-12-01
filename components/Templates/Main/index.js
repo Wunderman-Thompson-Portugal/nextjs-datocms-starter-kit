@@ -4,8 +4,6 @@ import GenericFooter from "@/components/Templates/Main/Footer";
 export default function MainLayout({ children }) {
   const header = children.props?.siteConfig?.headerConf;
 
-  console.log(header);
-
   return (
     <>
       <GenericHeader logotype={header?.logotype}>{children}</GenericHeader>
